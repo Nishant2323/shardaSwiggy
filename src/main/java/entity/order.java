@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class order {
 
 
-    int restoId;
-    int dishId;
-    int qua;
+   public int restoId;
+    public int dishId;
+   public int qua;
     public order(int restoId, int dishId, int qua) {
         this.restoId = restoId;
         this.dishId = dishId;

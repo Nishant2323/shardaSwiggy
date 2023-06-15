@@ -60,9 +60,9 @@ public class Main {
         for( int i=0; (line1= user.readLine())!=null;i++){
 
             String[] p = line1.split(",");
-            if(w3.equals(p[0])){
+            if(Integer.parseInt(w3)==Integer.parseInt(p[0])){
                 user u = new user(Integer.parseInt(p[0]),p[1],Integer.parseInt(p[2]));
-
+                n=u;
             }
         }
         if(n==null){
@@ -87,6 +87,7 @@ public class Main {
             }
             break;
             case 2 :System.out.println("under maintaines");
+            return;
         }
         int bill = 0;
       System.out.println("Here to take your order ");
@@ -98,6 +99,21 @@ public class Main {
             String w1 = input.readLine();
             String[] p = w1.split(",");
             order or = new order(Integer.parseInt(p[0]),Integer.parseInt(p[1]),Integer.parseInt(p[2]));
+            Kichen a= null;
+//        String i = this.restoId+"";
+            for(Kichen f : k){
+                if(f.id.equals(String.valueOf(or.restoId))){
+                    a = f;
+                    break;
+                }
+            }
+            Dish dis = null;
+            for(Dish d : a.d){
+                if(or.dishId==d.id){
+                    dis=d;
+                }
+            }
+            System.out.println(dis);
             int b =or.bill(k);
             bill = bill+b;
             System.out.println("enter yes to add more or no to not");

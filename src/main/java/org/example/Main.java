@@ -113,7 +113,7 @@ public class Main {
                     dis=d;
                 }
             }
-            System.out.println(dis);
+            System.out.println(dis+" quantity = " + or.qua);
             int b =or.bill(k);
             bill = bill+b;
             System.out.println("enter yes to add more or no to not");
@@ -135,7 +135,7 @@ public class Main {
 
                 t= n.payment(bill);
             }
-            System.out.println("your balance now is = " + t + "you will recive  your order at 10 mins");
+            System.out.println("your balance now is = " + t + " you will recive  your order at 10 mins");
         }
         else{
             System.out.println("you have guest account you have only cash on dilvery option your order will reach in 10 mins");
